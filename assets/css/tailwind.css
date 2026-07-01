@@ -79,6 +79,23 @@
     @apply mx-auto mt-6 h-1 w-28 rounded-full;
     background: linear-gradient(90deg, #ff69b4, #bf5fff, #00ffff, #ffd700);
   }
+
+  /* ブログ記事本文の共通スタイル */
+  .article-body h2 {
+    @apply mt-14 border-l-4 border-gold pl-4 font-serif text-2xl font-bold tracking-wider text-gold;
+  }
+  .article-body h3 {
+    @apply mt-10 font-serif text-xl font-bold tracking-wider text-gold-light;
+  }
+  .article-body p {
+    @apply mt-6 leading-loose text-gray-300;
+  }
+  .article-body ul {
+    @apply mt-6 list-disc space-y-2 pl-6 leading-loose text-gray-300 marker:text-gold;
+  }
+  .article-body strong {
+    @apply font-semibold text-gold;
+  }
 }
 
 /* ===== キラキラ (sparkle) パーツ ===== */
