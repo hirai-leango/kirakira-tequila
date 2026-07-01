@@ -39,21 +39,19 @@ const articles = [
 </script>
 
 <template>
-  <div class="bg-brand-black">
+  <div class="bg-night">
     <!-- Page Header -->
     <section class="relative overflow-hidden py-24 text-center">
       <div
-        class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.12)_0%,transparent_60%)]"
+        class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(191,95,255,0.2)_0%,transparent_55%)]"
         aria-hidden="true"
       />
-      <SparkleField :count="14" />
+      <SparkleBackground :count="20" :diamonds="6" :seed="37" />
       <div class="relative z-10 px-6">
-        <p class="text-sm tracking-[0.5em] text-gold-light">BLOG</p>
-        <h1 class="mt-4 font-serif text-4xl font-bold tracking-widest text-gold md:text-5xl">
-          ブログ
-        </h1>
-        <div class="gold-divider" />
-        <p class="mt-8 leading-loose text-gray-300">
+        <p class="font-display text-sm italic tracking-[0.5em] text-kira-cyan">BLOG</p>
+        <h1 class="text-holo mt-4 section-title">ブログ</h1>
+        <div class="holo-divider" />
+        <p class="mt-8 leading-loose text-white/80">
           テキーラの歴史から、夜のお店での楽しみ方まで。
         </p>
       </div>
@@ -62,28 +60,28 @@ const articles = [
     <!-- Article List -->
     <section class="pb-24">
       <div class="mx-auto max-w-4xl space-y-8 px-6">
-        <NuxtLink
-          v-for="article in articles"
-          :key="article.to"
-          :to="article.to"
-          class="group block rounded-lg border border-gold/20 bg-white/[0.02] p-8 transition-all duration-300 hover:border-gold hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]"
-        >
-          <div class="flex flex-wrap items-center gap-3 text-xs">
-            <span class="rounded-full border border-gold/50 px-3 py-1 tracking-widest text-gold">
-              {{ article.category }}
+        <FadeIn v-for="(article, i) in articles" :key="article.to" :delay="i * 120">
+          <NuxtLink
+            :to="article.to"
+            class="glass-card group block p-8"
+          >
+            <div class="flex flex-wrap items-center gap-3 text-xs">
+              <span class="rounded-full border border-gold/50 px-3 py-1 font-bold tracking-widest text-gold">
+                {{ article.category }}
+              </span>
+              <time :datetime="article.date" class="text-white/50">{{ article.date }}</time>
+            </div>
+            <h2 class="mt-4 text-2xl font-black tracking-wider text-white transition-colors duration-300 group-hover:text-gold">
+              {{ article.title }}
+            </h2>
+            <p class="mt-3 leading-relaxed text-white/70">
+              {{ article.description }}
+            </p>
+            <span class="mt-4 inline-block text-sm font-bold tracking-widest text-gold">
+              続きを読む →
             </span>
-            <time :datetime="article.date" class="text-gray-500">{{ article.date }}</time>
-          </div>
-          <h2 class="mt-4 font-serif text-2xl font-bold tracking-wider text-brand-white transition-colors duration-300 group-hover:text-gold">
-            {{ article.title }}
-          </h2>
-          <p class="mt-3 leading-relaxed text-gray-400">
-            {{ article.description }}
-          </p>
-          <span class="mt-4 inline-block text-sm tracking-widest text-gold">
-            続きを読む →
-          </span>
-        </NuxtLink>
+          </NuxtLink>
+        </FadeIn>
       </div>
     </section>
   </div>

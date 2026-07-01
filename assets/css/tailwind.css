@@ -82,19 +82,19 @@
 
   /* ブログ記事本文の共通スタイル */
   .article-body h2 {
-    @apply mt-14 border-l-4 border-gold pl-4 font-serif text-2xl font-bold tracking-wider text-gold;
+    @apply mt-14 border-l-4 border-gold pl-4 text-2xl font-black tracking-wider text-gold;
   }
   .article-body h3 {
-    @apply mt-10 font-serif text-xl font-bold tracking-wider text-gold-light;
+    @apply mt-10 text-xl font-bold tracking-wider text-gold-light;
   }
   .article-body p {
-    @apply mt-6 leading-loose text-gray-300;
+    @apply mt-6 leading-loose text-white/80;
   }
   .article-body ul {
-    @apply mt-6 list-disc space-y-2 pl-6 leading-loose text-gray-300 marker:text-gold;
+    @apply mt-6 list-disc space-y-2 pl-6 leading-loose text-white/80 marker:text-gold;
   }
   .article-body strong {
-    @apply font-semibold text-gold;
+    @apply font-bold text-gold;
   }
 }
 

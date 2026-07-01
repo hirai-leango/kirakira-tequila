@@ -8,26 +8,26 @@ defineProps<{
 </script>
 
 <template>
-  <article class="bg-brand-black">
+  <article class="bg-night">
     <!-- Article Header -->
     <header class="relative overflow-hidden py-20 text-center md:py-24">
       <div
-        class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.12)_0%,transparent_60%)]"
+        class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(191,95,255,0.2)_0%,transparent_55%)]"
         aria-hidden="true"
       />
-      <SparkleField :count="12" />
+      <SparkleBackground :count="16" :seed="13" />
       <div class="relative z-10 mx-auto max-w-3xl px-6">
         <div class="flex items-center justify-center gap-3 text-xs">
-          <span class="rounded-full border border-gold/50 px-3 py-1 tracking-widest text-gold">
+          <span class="rounded-full border border-gold/50 px-3 py-1 font-bold tracking-widest text-gold">
             {{ category }}
           </span>
-          <time :datetime="date" class="text-gray-500">{{ date }}</time>
+          <time :datetime="date" class="text-white/50">{{ date }}</time>
         </div>
-        <h1 class="mt-6 font-serif text-3xl font-bold leading-snug tracking-wider text-gold md:text-4xl">
+        <h1 class="text-holo mt-6 text-3xl font-black leading-snug tracking-wider md:text-4xl">
           {{ title }}
         </h1>
-        <div class="gold-divider" />
-        <p v-if="lead" class="mt-8 text-left leading-loose text-gray-300">
+        <div class="holo-divider" />
+        <p v-if="lead" class="mt-8 text-left leading-loose text-white/80">
           {{ lead }}
         </p>
       </div>
@@ -39,19 +39,17 @@ defineProps<{
     </div>
 
     <!-- Article Footer CTA -->
-    <footer class="relative overflow-hidden border-t border-gold/20 bg-gradient-to-b from-brand-black via-[#1a1503] to-brand-black py-16">
-      <SparkleField :count="8" />
+    <footer class="relative overflow-hidden border-t border-white/10 bg-gradient-to-b from-night via-night-soft to-night py-16">
+      <SparkleBackground :count="12" :diamonds="4" :seed="29" />
       <div class="relative z-10 mx-auto max-w-3xl px-6 text-center">
-        <p class="font-serif text-xl tracking-widest text-gold">キラキラテキーラ</p>
-        <p class="mt-4 leading-loose text-gray-300">
+        <p class="text-shimmer text-xl font-black tracking-widest">キラキラテキーラ</p>
+        <p class="mt-4 leading-loose text-white/80">
           ダイヤモンドを纏ったプレミアムテキーラで、<br class="hidden md:block" />
           お店の一杯を特別な体験に。取り扱いをご希望の店舗様はお気軽にご相談ください。
         </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <NuxtLink to="/products" class="btn-gold">商品を見る</NuxtLink>
-          <NuxtLink to="/blog" class="inline-block rounded-full border border-gray-600 px-8 py-3 tracking-widest text-gray-300 transition-colors duration-300 hover:border-gold hover:text-gold">
-            ブログ一覧へ
-          </NuxtLink>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <NuxtLink to="/contact" class="btn-holo hover-sparkle">導入のご相談</NuxtLink>
+          <NuxtLink to="/blog" class="btn-outline-holo">ブログ一覧へ</NuxtLink>
         </div>
       </div>
     </footer>
