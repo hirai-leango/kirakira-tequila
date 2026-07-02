@@ -93,8 +93,32 @@
   .article-body ul {
     @apply mt-6 list-disc space-y-2 pl-6 leading-loose text-white/80 marker:text-gold;
   }
+  .article-body ol {
+    @apply mt-6 list-decimal space-y-2 pl-6 leading-loose text-white/80 marker:font-bold marker:text-gold;
+  }
   .article-body strong {
     @apply font-bold text-gold;
+  }
+  .article-body a {
+    @apply text-kira-cyan underline-offset-4 hover:underline;
+  }
+  .article-body blockquote {
+    @apply mt-6 rounded-r-xl border-l-4 border-gold bg-white/5 px-5 py-4 leading-loose text-white/70;
+  }
+  .article-body table {
+    @apply mt-6 w-full border-collapse text-sm leading-relaxed;
+  }
+  .article-body th {
+    @apply border border-white/20 bg-gold/15 px-3 py-2.5 text-left font-bold text-gold;
+  }
+  .article-body td {
+    @apply border border-white/15 px-3 py-2.5 align-top text-white/80;
+  }
+  .article-body .table-scroll {
+    @apply mt-6 overflow-x-auto;
+  }
+  .article-body .table-scroll table {
+    @apply mt-0 min-w-[560px];
   }
 }
 

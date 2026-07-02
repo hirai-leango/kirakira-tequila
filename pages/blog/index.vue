@@ -2,50 +2,28 @@
 useSeo({
   title: 'ブログ | キラキラテキーラ',
   description:
-    'テキーラの歴史や文化、コンセプトカフェ・ガールズバーでのテキーラの楽しみ方など、キラキラテキーラがお届けするコラム一覧です。',
+    'テキーラの基礎知識・飲み方から、コンセプトカフェ・ガールズバーの楽しみ方、話題のドリンク演出まで。キラキラテキーラ編集部がお届けするテキーラ・ナイトライフ専門メディアです。',
   path: '/blog',
 })
 
-const articles = [
-  {
-    to: '/blog/history-of-tequila',
-    category: 'テキーラの知識',
-    title: 'テキーラの歴史と文化',
-    description:
-      'メキシコの大地が育んだ蒸留酒・テキーラ。アガベとともに歩んだ数百年の歴史、原産地呼称制度、そして日本での広がりまでを徹底解説します。',
-    date: '2026-06-01',
-  },
-  {
-    to: '/blog/concept-cafe-tequila',
-    category: 'お店での楽しみ方',
-    title: 'コンセプトカフェで楽しむテキーラ',
-    description:
-      'コンセプトカフェの定番ドリンクとなったテキーラショット。人気の理由と注文の流れ、お店とお客様の双方が楽しむためのポイントを紹介します。',
-    date: '2026-06-10',
-  },
-  {
-    to: '/blog/girls-bar-tequila',
-    category: 'お店での楽しみ方',
-    title: 'ガールズバーで人気のテキーラショット',
-    description:
-      'ガールズバーの乾杯シーンに欠かせないテキーラショット。人気の背景、スマートな頼み方、お店選びのコツまで詳しく解説します。',
-    date: '2026-06-20',
-  },
-  {
-    to: '/blog/tequila-entertainment',
-    category: 'エンタメテキーラ',
-    title: 'テキーラ観覧車・クライナー——エンタメテキーラの世界',
-    description:
-      'テキーラ観覧車、クライナーファイグリング、そしてキラキラテキーラへ。「飲む」を「遊ぶ」に変えるエンタメショットの最前線を紹介します。',
-    date: '2026-07-01',
-  },
-]
+const { all, categories } = useBlogArticles()
+const route = useRoute()
+
+const selectedCategory = computed(() =>
+  typeof route.query.category === 'string' ? route.query.category : '',
+)
+
+const filtered = computed(() =>
+  selectedCategory.value
+    ? all.filter((a) => a.category === selectedCategory.value)
+    : all,
+)
 </script>
 
 <template>
   <div class="bg-night">
     <!-- Page Header -->
-    <section class="relative overflow-hidden py-24 text-center">
+    <section class="relative overflow-hidden py-20 text-center">
       <div
         class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(191,95,255,0.2)_0%,transparent_55%)]"
         aria-hidden="true"
@@ -56,29 +34,58 @@ const articles = [
         <h1 class="text-holo mt-4 section-title">ブログ</h1>
         <div class="holo-divider" />
         <p class="mt-8 leading-loose text-white/80">
-          テキーラの歴史から、夜のお店での楽しみ方まで。
+          テキーラの基礎知識から、コンカフェ・ガールズバーの楽しみ方、話題のドリンク演出まで。
         </p>
       </div>
     </section>
 
+    <!-- Category Filter -->
+    <nav class="mx-auto max-w-5xl px-6" aria-label="カテゴリー絞り込み">
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <NuxtLink
+          to="/blog"
+          class="rounded-full border px-4 py-1.5 text-xs font-bold tracking-widest transition-colors"
+          :class="
+            selectedCategory === ''
+              ? 'border-gold bg-gold/15 text-gold'
+              : 'border-white/20 text-white/60 hover:border-gold/60 hover:text-gold'
+          "
+        >
+          すべて（{{ all.length }}）
+        </NuxtLink>
+        <NuxtLink
+          v-for="cat in categories"
+          :key="cat.name"
+          :to="`/blog?category=${encodeURIComponent(cat.name)}`"
+          class="rounded-full border px-4 py-1.5 text-xs font-bold tracking-widest transition-colors"
+          :class="
+            selectedCategory === cat.name
+              ? 'border-gold bg-gold/15 text-gold'
+              : 'border-white/20 text-white/60 hover:border-gold/60 hover:text-gold'
+          "
+        >
+          {{ cat.name }}（{{ cat.count }}）
+        </NuxtLink>
+      </div>
+    </nav>
+
     <!-- Article List -->
-    <section class="pb-24">
-      <div class="mx-auto max-w-4xl space-y-8 px-6">
-        <FadeIn v-for="(article, i) in articles" :key="article.to" :delay="i * 120">
-          <NuxtLink
-            :to="article.to"
-            class="glass-card group block p-8"
-          >
+    <section class="py-16 pb-24">
+      <div class="mx-auto grid max-w-5xl gap-6 px-6 md:grid-cols-2">
+        <FadeIn v-for="(article, i) in filtered" :key="article.slug" :delay="(i % 4) * 80">
+          <NuxtLink :to="`/blog/${article.slug}`" class="glass-card group block h-full p-7">
             <div class="flex flex-wrap items-center gap-3 text-xs">
               <span class="rounded-full border border-gold/50 px-3 py-1 font-bold tracking-widest text-gold">
                 {{ article.category }}
               </span>
-              <time :datetime="article.date" class="text-white/50">{{ article.date }}</time>
+              <time :datetime="article.publishedAt" class="text-white/50">
+                {{ article.publishedAt }}
+              </time>
             </div>
-            <h2 class="mt-4 text-2xl font-black tracking-wider text-white transition-colors duration-300 group-hover:text-gold">
+            <h2 class="mt-4 text-lg font-black leading-snug tracking-wider text-white transition-colors duration-300 group-hover:text-gold">
               {{ article.title }}
             </h2>
-            <p class="mt-3 leading-relaxed text-white/70">
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
               {{ article.description }}
             </p>
             <span class="mt-4 inline-block text-sm font-bold tracking-widest text-gold">
