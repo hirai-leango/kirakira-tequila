@@ -1,13 +1,9 @@
 <script setup lang="ts">
-useHead({
+useSeo({
   title: 'ブログ | キラキラテキーラ',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'テキーラの歴史や文化、コンセプトカフェ・ガールズバーでのテキーラの楽しみ方など、キラキラテキーラがお届けするコラム一覧です。',
-    },
-  ],
+  description:
+    'テキーラの歴史や文化、コンセプトカフェ・ガールズバーでのテキーラの楽しみ方など、キラキラテキーラがお届けするコラム一覧です。',
+  path: '/blog',
 })
 
 const articles = [

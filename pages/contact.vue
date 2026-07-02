@@ -1,13 +1,9 @@
 <script setup lang="ts">
-useHead({
+useSeo({
   title: 'お問い合わせ | キラキラテキーラ',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'キラキラテキーラの導入・卸に関するお問い合わせはこちら。コンセプトカフェ・ガールズバー店舗様向けの導入プランをご案内します。',
-    },
-  ],
+  description:
+    'キラキラテキーラの導入・卸に関するお問い合わせはこちら。コンセプトカフェ・ガールズバー店舗様向けの導入プランをご案内します。',
+  path: '/contact',
 })
 </script>
 

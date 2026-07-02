@@ -1,13 +1,9 @@
 <script setup lang="ts">
-useHead({
+useSeo({
   title: '商品紹介 | キラキラテキーラ',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'キラキラテキーラの300mlボトルとショットグラスをご紹介。キラキラカットガラスとダイヤモンド装飾が生み出す、プレミアムな輝きをお届けします。',
-    },
-  ],
+  description:
+    'キラキラテキーラの300mlボトルとショットグラスをご紹介。キラキラカットガラスとダイヤモンド装飾が生み出す、プレミアムな輝きをお届けします。',
+  path: '/products',
 })
 
 const bottleSpecs = [

@@ -1,16 +1,22 @@
 <script setup lang="ts">
-useHead({
+useSeo({
   title: 'テキーラの歴史と文化 | キラキラテキーラ',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'テキーラはいつ、どこで生まれたのか。アステカ時代のプルケから蒸留技術の伝来、原産地呼称制度、日本での広がりまで、テキーラの歴史と文化を徹底解説します。',
-    },
-    { property: 'og:title', content: 'テキーラの歴史と文化 | キラキラテキーラ' },
-    { property: 'og:type', content: 'article' },
-  ],
+  description:
+    'テキーラはいつ、どこで生まれたのか。アステカ時代のプルケから蒸留技術の伝来、原産地呼称制度、日本での広がりまで、テキーラの歴史と文化を徹底解説します。',
+  path: '/blog/history-of-tequila',
+  type: 'article',
+  article: {
+    headline: 'テキーラの歴史と文化',
+    datePublished: '2026-06-01',
+    dateModified: '2026-06-01',
+  },
 })
+
+const relatedArticles = [
+  { to: '/blog/concept-cafe-tequila', title: 'コンセプトカフェで楽しむテキーラ' },
+  { to: '/blog/girls-bar-tequila', title: 'ガールズバーで人気のテキーラショット' },
+  { to: '/blog/tequila-entertainment', title: 'テキーラ観覧車・クライナー——エンタメテキーラの世界' },
+]
 </script>
 
 <template>
@@ -117,5 +123,16 @@ useHead({
     <p>
       次にテキーラショットを手にするとき、ほんの少しだけ、この長い物語を思い出してみてください。グラスの向こうに広がるアガベ畑の風景を想像すれば、その一杯はきっと、いつもより深く、特別な味わいになるはずです。
     </p>
+
+    <section aria-label="関連記事">
+      <h2>関連記事</h2>
+      <ul>
+        <li v-for="article in relatedArticles" :key="article.to">
+          <NuxtLink :to="article.to" class="text-gold underline-offset-4 hover:underline">
+            {{ article.title }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </section>
   </BlogArticle>
 </template>

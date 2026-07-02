@@ -1,16 +1,22 @@
 <script setup lang="ts">
-useHead({
+useSeo({
   title: 'コンセプトカフェで楽しむテキーラ | キラキラテキーラ',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'コンセプトカフェ（コンカフェ）で定番となったテキーラショットの魅力を徹底解説。人気の理由、注文の流れ、マナー、お店側の演出アイデアまで詳しく紹介します。',
-    },
-    { property: 'og:title', content: 'コンセプトカフェで楽しむテキーラ | キラキラテキーラ' },
-    { property: 'og:type', content: 'article' },
-  ],
+  description:
+    'コンセプトカフェ（コンカフェ）で定番となったテキーラショットの魅力を徹底解説。人気の理由、注文の流れ、マナー、お店側の演出アイデアまで詳しく紹介します。',
+  path: '/blog/concept-cafe-tequila',
+  type: 'article',
+  article: {
+    headline: 'コンセプトカフェで楽しむテキーラ',
+    datePublished: '2026-06-10',
+    dateModified: '2026-06-10',
+  },
 })
+
+const relatedArticles = [
+  { to: '/blog/history-of-tequila', title: 'テキーラの歴史と文化' },
+  { to: '/blog/girls-bar-tequila', title: 'ガールズバーで人気のテキーラショット' },
+  { to: '/blog/tequila-entertainment', title: 'テキーラ観覧車・クライナー——エンタメテキーラの世界' },
+]
 </script>
 
 <template>
@@ -94,5 +100,16 @@ useHead({
     <p>
       コンカフェでの一杯をもっと特別にしたい店舗様は、ぜひキラキラテキーラの導入をご検討ください。ダイヤモンドを纏った一杯が、あなたのお店の乾杯を輝かせます。
     </p>
+
+    <section aria-label="関連記事">
+      <h2>関連記事</h2>
+      <ul>
+        <li v-for="article in relatedArticles" :key="article.to">
+          <NuxtLink :to="article.to" class="text-gold underline-offset-4 hover:underline">
+            {{ article.title }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </section>
   </BlogArticle>
 </template>

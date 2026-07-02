@@ -1,16 +1,22 @@
 <script setup lang="ts">
-useHead({
+useSeo({
   title: 'ガールズバーで人気のテキーラショット | キラキラテキーラ',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'ガールズバーの乾杯に欠かせないテキーラショット。人気の理由、スマートな頼み方とマナー、お店側の売上・演出の工夫まで、ガールズバーとテキーラの関係を徹底解説します。',
-    },
-    { property: 'og:title', content: 'ガールズバーで人気のテキーラショット | キラキラテキーラ' },
-    { property: 'og:type', content: 'article' },
-  ],
+  description:
+    'ガールズバーの乾杯に欠かせないテキーラショット。人気の理由、スマートな頼み方とマナー、お店側の売上・演出の工夫まで、ガールズバーとテキーラの関係を徹底解説します。',
+  path: '/blog/girls-bar-tequila',
+  type: 'article',
+  article: {
+    headline: 'ガールズバーで人気のテキーラショット',
+    datePublished: '2026-06-20',
+    dateModified: '2026-06-20',
+  },
 })
+
+const relatedArticles = [
+  { to: '/blog/history-of-tequila', title: 'テキーラの歴史と文化' },
+  { to: '/blog/concept-cafe-tequila', title: 'コンセプトカフェで楽しむテキーラ' },
+  { to: '/blog/tequila-entertainment', title: 'テキーラ観覧車・クライナー——エンタメテキーラの世界' },
+]
 </script>
 
 <template>
@@ -98,5 +104,16 @@ useHead({
     <p>
       節度ある楽しい乾杯文化と、記憶に残る特別な演出。この2つがそろえば、あなたのお店のテキーラショットは、他のどの店にも真似できない武器になります。キラキラテキーラの導入にご興味のある店舗様は、ぜひお気軽にお問い合わせください。ダイヤモンドの輝きとともに、最高の乾杯をお届けします。
     </p>
+
+    <section aria-label="関連記事">
+      <h2>関連記事</h2>
+      <ul>
+        <li v-for="article in relatedArticles" :key="article.to">
+          <NuxtLink :to="article.to" class="text-gold underline-offset-4 hover:underline">
+            {{ article.title }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </section>
   </BlogArticle>
 </template>

@@ -1,19 +1,22 @@
 <script setup lang="ts">
-useHead({
+useSeo({
   title: 'テキーラ観覧車・クライナー——エンタメテキーラの世界 | キラキラテキーラ',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'テキーラ観覧車、クライナーファイグリング、映えるショット演出まで。「飲む」を「遊ぶ」に変えるエンタメテキーラ・エンタメショットの最前線を徹底解説します。',
-    },
-    {
-      property: 'og:title',
-      content: 'テキーラ観覧車・クライナー——エンタメテキーラの世界 | キラキラテキーラ',
-    },
-    { property: 'og:type', content: 'article' },
-  ],
+  description:
+    'テキーラ観覧車、クライナーファイグリング、映えるショット演出まで。「飲む」を「遊ぶ」に変えるエンタメテキーラ・エンタメショットの最前線を徹底解説します。',
+  path: '/blog/tequila-entertainment',
+  type: 'article',
+  article: {
+    headline: 'テキーラ観覧車・クライナー——エンタメテキーラの世界',
+    datePublished: '2026-07-01',
+    dateModified: '2026-07-01',
+  },
 })
+
+const relatedArticles = [
+  { to: '/blog/history-of-tequila', title: 'テキーラの歴史と文化' },
+  { to: '/blog/concept-cafe-tequila', title: 'コンセプトカフェで楽しむテキーラ' },
+  { to: '/blog/girls-bar-tequila', title: 'ガールズバーで人気のテキーラショット' },
+]
 </script>
 
 <template>
@@ -89,5 +92,16 @@ useHead({
     <p>
       ショットを、イベントに。乾杯を、思い出に。エンタメテキーラの世界は、まだまだ進化の途中です。次にお店でショットを頼むときは、ぜひ「映える一杯」を選んでみてください。その一杯が、夜をもっと輝かせてくれるはずです。
     </p>
+
+    <section aria-label="関連記事">
+      <h2>関連記事</h2>
+      <ul>
+        <li v-for="article in relatedArticles" :key="article.to">
+          <NuxtLink :to="article.to" class="text-gold underline-offset-4 hover:underline">
+            {{ article.title }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </section>
   </BlogArticle>
 </template>

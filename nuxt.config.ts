@@ -22,7 +22,31 @@ export default defineNuxtConfig({
             'ダイヤモンドを纏ったプレミアムテキーラ。コンセプトカフェ・ガールズバーの一杯を、忘れられない特別な体験に。',
         },
         { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'キラキラテキーラ' },
         { name: 'theme-color', content: '#0d0020' },
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'キラキラテキーラ',
+            url: 'https://kirakira-tequila.jp',
+            description:
+              'ダイヤモンドを纏ったキラキラテキーラ。コンセプトカフェ・ガールズバーに特別な体験を。',
+          }),
+        },
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'キラキラテキーラ',
+            url: 'https://kirakira-tequila.jp',
+            logo: 'https://kirakira-tequila.jp/logo.png',
+          }),
+        },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
