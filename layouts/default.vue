@@ -3,7 +3,9 @@ const menuOpen = ref(false)
 
 const navLinks = [
   { to: '/', label: 'トップ' },
+  { to: '/about', label: 'ブランド' },
   { to: '/products', label: '商品' },
+  { to: '/scenes', label: '演出アイデア' },
   { to: '/blog', label: 'ブログ' },
   { to: '/contact', label: 'お問い合わせ' },
 ]
