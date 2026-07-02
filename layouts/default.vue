@@ -8,6 +8,11 @@ const navLinks = [
   { to: '/contact', label: 'お問い合わせ' },
 ]
 
+const legalLinks = [
+  { to: '/privacy', label: 'プライバシーポリシー' },
+  { to: '/legal', label: '特定商取引法に基づく表記' },
+]
+
 const route = useRoute()
 watch(
   () => route.fullPath,
@@ -107,6 +112,19 @@ watch(
             {{ link.label }}
           </NuxtLink>
         </nav>
+        <nav class="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="規約・ポリシー">
+          <NuxtLink
+            v-for="link in legalLinks"
+            :key="link.to"
+            :to="link.to"
+            class="text-xs text-white/50 transition-colors hover:text-gold"
+          >
+            {{ link.label }}
+          </NuxtLink>
+        </nav>
+        <p class="mt-8 rounded-full border border-gold/30 bg-gold/5 px-4 py-2 text-xs leading-relaxed text-gold/90 md:inline-block">
+          未成年者の飲酒は法律で禁止されています。お酒は20歳を過ぎてから。
+        </p>
         <p class="mt-8 text-xs text-white/40">
           &copy; {{ new Date().getFullYear() }} キラキラテキーラ. All rights reserved.
         </p>
