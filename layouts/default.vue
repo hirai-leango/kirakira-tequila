@@ -6,6 +6,7 @@ const navLinks = [
   { to: '/about/', label: 'ブランド' },
   { to: '/products/', label: '商品' },
   { to: '/scenes/', label: '演出アイデア' },
+  { to: '/voices/', label: '口コミ' },
   { to: '/blog/', label: 'ブログ' },
   { to: '/contact/', label: 'お問い合わせ' },
 ]
