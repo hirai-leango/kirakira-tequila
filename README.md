@@ -73,3 +73,19 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Cloudflare Pages デプロイ設定
+
+Cloudflare Pages でのデプロイに必要な設定は以下の通りです。
+
+| 項目 | 設定値 |
+| --- | --- |
+| Framework preset | Nuxt |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Node version | 20（`.node-version` で指定） |
+
+- Nitro のプリセットは `nuxt.config.ts` の `nitro.preset: 'cloudflare-pages'` で設定済みです。ビルドすると `dist/` に `_worker.js`・`_routes.json` などの Cloudflare Pages 用の成果物が生成されます。
+- `wrangler.toml` に `compatibility_flags = ["nodejs_compat"]` を設定しています。
+- 環境変数: 現時点では不要です。
+- ローカルでの動作確認: `npx wrangler pages dev dist`

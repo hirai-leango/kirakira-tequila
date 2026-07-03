@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt'],
   nitro: {
+    preset: 'cloudflare-pages',
     prerender: {
       // generate /path/index.html so trailing-slash URLs resolve on static hosting
       autoSubfolderIndex: true,
