@@ -1,6 +1,20 @@
-# Nuxt Minimal Starter
+# キラキラテキーラ Webサイト
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+ダイヤモンドを纏ったプレミアムテキーラブランドの公式サイト。
+
+## 技術スタック
+- Nuxt 3 / Vue 3 / TypeScript / Tailwind CSS
+- Cloudflare Pages (ホスティング)
+- Google Analytics 4
+
+## サイト構成
+- トップページ・ブランド紹介
+- 商品ページ（ボトル・ショットグラス）
+- SEOブログ（114記事）
+- お問い合わせ・プライバシーポリシー・特定商取引法表記
+
+## 本番ドメイン
+https://kirakira-tequila.com
 
 ## Setup
 
