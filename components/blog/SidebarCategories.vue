@@ -8,7 +8,7 @@ const { categories } = useBlogArticles()
     <ul class="mt-3 divide-y divide-white/10">
       <li v-for="cat in categories" :key="cat.name">
         <NuxtLink
-          :to="`/blog?category=${encodeURIComponent(cat.name)}`"
+          :to="`/blog/?category=${encodeURIComponent(cat.name)}`"
           class="flex items-center justify-between py-2.5 text-sm text-white/80 transition-colors hover:text-gold"
         >
           <span>{{ cat.name }}</span>

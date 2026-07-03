@@ -3,7 +3,7 @@ useSeo({
   title: '演出アイデア | キラキラテキーラ',
   description:
     'キラキラテキーラの使用シーン・演出アイデア集。誕生日ショット、指名ショット、イベントショットなど、コンセプトカフェ・ガールズバーでショットを盛り上げる演出をご紹介します。',
-  path: '/scenes',
+  path: '/scenes/',
 })
 
 const scenes = [
@@ -136,7 +136,7 @@ const scenes = [
             お気軽にお問い合わせください。
           </p>
           <div class="mt-10">
-            <NuxtLink to="/contact" class="btn-holo hover-sparkle">お問い合わせはこちら</NuxtLink>
+            <NuxtLink to="/contact/" class="btn-holo hover-sparkle">お問い合わせはこちら</NuxtLink>
           </div>
         </FadeIn>
       </div>

@@ -40,7 +40,7 @@ const props = withDefaults(
 )
 
 const route = useRoute()
-const path = route.path
+const path = route.path.endsWith('/') ? route.path : `${route.path}/`
 const canonicalUrl = `${SITE_URL}${path}`
 const displayUpdatedAt = computed(() => props.updatedAt || props.publishedAt)
 const absoluteOgImage = props.ogImage.startsWith('http')
@@ -73,8 +73,8 @@ useSeo({
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'ホーム', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'ブログ', item: `${SITE_URL}/blog` },
+        { '@type': 'ListItem', position: 1, name: 'ホーム', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'ブログ', item: `${SITE_URL}/blog/` },
         { '@type': 'ListItem', position: 3, name: props.title, item: canonicalUrl },
       ],
     },
@@ -112,10 +112,10 @@ const scrollToHeading = (id: string) => {
       <nav class="breadcrumb text-xs leading-relaxed text-white/50" aria-label="パンくずリスト">
         <NuxtLink to="/" class="transition-colors hover:text-gold">ホーム</NuxtLink>
         <span class="mx-1.5" aria-hidden="true">&gt;</span>
-        <NuxtLink to="/blog" class="transition-colors hover:text-gold">ブログ</NuxtLink>
+        <NuxtLink to="/blog/" class="transition-colors hover:text-gold">ブログ</NuxtLink>
         <span class="mx-1.5" aria-hidden="true">&gt;</span>
         <NuxtLink
-          :to="`/blog?category=${encodeURIComponent(category)}`"
+          :to="`/blog/?category=${encodeURIComponent(category)}`"
           class="transition-colors hover:text-gold"
         >
           {{ category }}
@@ -204,7 +204,7 @@ const scrollToHeading = (id: string) => {
               <p class="text-lg font-black tracking-wider text-white">
                 キラキラテキーラについてのお問い合わせはこちら
               </p>
-              <NuxtLink to="/contact" class="btn-holo hover-sparkle mt-6 !px-8 !py-3 !text-base">
+              <NuxtLink to="/contact/" class="btn-holo hover-sparkle mt-6 !px-8 !py-3 !text-base">
                 お問い合わせする
               </NuxtLink>
             </div>
@@ -272,7 +272,7 @@ const scrollToHeading = (id: string) => {
                 ダイヤモンドを纏った光るボトルとグラスで、ショット演出をワンランク上の体験に。<br class="hidden md:block" />
                 卸価格・導入プラン・サンプルのご相談はお気軽にどうぞ。
               </p>
-              <NuxtLink to="/contact" class="btn-holo hover-sparkle mt-8">
+              <NuxtLink to="/contact/" class="btn-holo hover-sparkle mt-8">
                 導入のご相談はこちら
               </NuxtLink>
             </div>

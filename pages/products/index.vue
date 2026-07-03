@@ -3,7 +3,7 @@ useSeo({
   title: '商品紹介 | キラキラテキーラ',
   description:
     'キラキラテキーラの300mlボトルとショットグラスをご紹介。キラキラカットガラスとダイヤモンド装飾が生み出す、プレミアムな輝きをお届けします。',
-  path: '/products',
+  path: '/products/',
 })
 
 const bottleSpecs = [
@@ -187,7 +187,7 @@ const secrets = [
             取り扱いをご希望の方はお気軽にお問い合わせください。
           </p>
           <div class="mt-8">
-            <NuxtLink to="/contact" class="btn-holo hover-sparkle">お問い合わせ</NuxtLink>
+            <NuxtLink to="/contact/" class="btn-holo hover-sparkle">お問い合わせ</NuxtLink>
           </div>
         </FadeIn>
       </div>

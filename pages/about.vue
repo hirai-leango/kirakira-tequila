@@ -3,7 +3,7 @@ useSeo({
   title: 'ブランドストーリー | キラキラテキーラ',
   description:
     'キラキラテキーラのブランドストーリー。コンセプトカフェの一杯のショットを特別な体験に変えたい——ダイヤモンドを纏ったテキーラが生まれた理由と、私たちのビジョンをご紹介します。',
-  path: '/about',
+  path: '/about/',
 })
 
 const stats = [
@@ -146,7 +146,7 @@ const stats = [
             夜のお店の「一杯」を特別にしたい店舗様を応援します。
           </p>
           <div class="mt-10">
-            <NuxtLink to="/contact" class="btn-holo hover-sparkle">導入のご相談はこちら</NuxtLink>
+            <NuxtLink to="/contact/" class="btn-holo hover-sparkle">導入のご相談はこちら</NuxtLink>
           </div>
         </FadeIn>
       </div>

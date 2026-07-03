@@ -3,16 +3,16 @@ const menuOpen = ref(false)
 
 const navLinks = [
   { to: '/', label: 'トップ' },
-  { to: '/about', label: 'ブランド' },
-  { to: '/products', label: '商品' },
-  { to: '/scenes', label: '演出アイデア' },
-  { to: '/blog', label: 'ブログ' },
-  { to: '/contact', label: 'お問い合わせ' },
+  { to: '/about/', label: 'ブランド' },
+  { to: '/products/', label: '商品' },
+  { to: '/scenes/', label: '演出アイデア' },
+  { to: '/blog/', label: 'ブログ' },
+  { to: '/contact/', label: 'お問い合わせ' },
 ]
 
 const legalLinks = [
-  { to: '/privacy', label: 'プライバシーポリシー' },
-  { to: '/legal', label: '特定商取引法に基づく表記' },
+  { to: '/privacy/', label: 'プライバシーポリシー' },
+  { to: '/legal/', label: '特定商取引法に基づく表記' },
 ]
 
 const route = useRoute()

@@ -13,7 +13,7 @@ interface ArticleSeoOptions {
 interface SeoOptions {
   title: string
   description: string
-  /** サイトルートからのパス（例: '/blog/history-of-tequila'） */
+  /** サイトルートからのパス（例: '/blog/history-of-tequila/'） */
   path: string
   /** og:type。記事ページは 'article' を指定 */
   type?: 'website' | 'article'
@@ -40,7 +40,9 @@ export function useSeo(options: SeoOptions) {
     jsonLd,
   } = options
 
-  const url = `${SITE_URL}${path === '/' ? '' : path}` || SITE_URL
+  // canonical / og:url は常に末尾スラッシュ付きで出力する
+  const normalizedPath = path.endsWith('/') ? path : `${path}/`
+  const url = `${SITE_URL}${normalizedPath}`
 
   const structuredData: Record<string, unknown>[] = []
 

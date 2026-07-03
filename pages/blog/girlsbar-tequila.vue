@@ -33,10 +33,10 @@ const faqs = [
 ]
 
 const relatedArticles = [
-  { title: 'ガールズバーで人気のテキーラショット｜スマートな頼み方とマナー', url: '/blog/girls-bar-tequila', category: 'ガールズバー' },
-  { title: 'テキーラショットのやり方｜塩・ライムの順番から飲み方マナーまで', url: '/blog/tequila-shot-yarikata', category: 'テキーラの飲み方' },
-  { title: 'ガールズバーとは？システム・雰囲気・楽しみ方を初心者向けに解説', url: '/blog/girlsbar-toha', category: 'ガールズバー' },
-  { title: 'エンタメテキーラの世界｜テキーラ観覧車からキラキラテキーラまで', url: '/blog/tequila-entertainment', category: 'エンタメ・演出' },
+  { title: 'ガールズバーで人気のテキーラショット｜スマートな頼み方とマナー', url: '/blog/girls-bar-tequila/', category: 'ガールズバー' },
+  { title: 'テキーラショットのやり方｜塩・ライムの順番から飲み方マナーまで', url: '/blog/tequila-shot-yarikata/', category: 'テキーラの飲み方' },
+  { title: 'ガールズバーとは？システム・雰囲気・楽しみ方を初心者向けに解説', url: '/blog/girlsbar-toha/', category: 'ガールズバー' },
+  { title: 'エンタメテキーラの世界｜テキーラ観覧車からキラキラテキーラまで', url: '/blog/tequila-entertainment/', category: 'エンタメ・演出' },
 ]
 </script>
 
@@ -69,7 +69,7 @@ const relatedArticles = [
     <h2>テキーラショットが盛り上がる4つの理由</h2>
     <h3>1. 儀式性がある</h3>
     <p>
-      塩を舐め、ショットを飲み干し、ライムをかじる。テキーラショットには他のお酒にはない「型」があります。この儀式性こそが、飲む行為をイベントに変える最大の要素です。塩とライムの意味や本場の飲み方については、<NuxtLink to="/blog/tequila-salt-lime">テキーラに塩とライムをつける理由</NuxtLink>で詳しく解説しています。
+      塩を舐め、ショットを飲み干し、ライムをかじる。テキーラショットには他のお酒にはない「型」があります。この儀式性こそが、飲む行為をイベントに変える最大の要素です。塩とライムの意味や本場の飲み方については、<NuxtLink to="/blog/tequila-salt-lime/">テキーラに塩とライムをつける理由</NuxtLink>で詳しく解説しています。
     </p>
     <h3>2. 全員参加で一体感が生まれる</h3>
     <p>
@@ -90,7 +90,7 @@ const relatedArticles = [
     </p>
     <div class="table-scroll"><table><thead><tr><th>お酒</th><th>度数の目安</th><th>味わい</th><th>盛り上がり度</th><th>特徴</th></tr></thead><tbody><tr><td>テキーラ</td><td>約40度</td><td>アガベ由来の香りとキレ</td><td>非常に高い</td><td>塩・ライムの儀式性があり乾杯の主役に最適</td></tr><tr><td>クライナーファイグリング</td><td>約15〜20度</td><td>イチジクなどの甘いリキュール</td><td>高い</td><td>小瓶ごと乾杯できる手軽さで人気</td></tr><tr><td>イエガーマイスター</td><td>約35度</td><td>ハーブの複雑な甘苦さ</td><td>高い</td><td>キンキンに冷やして飲むのが定番</td></tr><tr><td>コカレロ</td><td>約29度</td><td>ハーブ系で意外と飲みやすい</td><td>高い</td><td>ボムグラスを使った独特の飲み方が映える</td></tr><tr><td>チャミスル</td><td>約13〜16度</td><td>フルーツフレーバーで軽い</td><td>中</td><td>度数低めでショット初心者にも向く</td></tr></tbody></table></div>
     <p>
-      甘くて飲みやすいリキュール系ショットも人気ですが、<strong>「格」と「儀式性」で頭ひとつ抜けているのがテキーラ</strong>です。40度という度数がもたらす非日常感、塩とライムの作法、そしてプレミアムテキーラなら味わいそのものの満足感——「特別な乾杯」を演出したい場面では、やはりテキーラが選ばれ続けています。テキーラの種類による味の違いは<NuxtLink to="/blog/tequila-shurui">テキーラの種類を徹底解説した記事</NuxtLink>が参考になります。
+      甘くて飲みやすいリキュール系ショットも人気ですが、<strong>「格」と「儀式性」で頭ひとつ抜けているのがテキーラ</strong>です。40度という度数がもたらす非日常感、塩とライムの作法、そしてプレミアムテキーラなら味わいそのものの満足感——「特別な乾杯」を演出したい場面では、やはりテキーラが選ばれ続けています。テキーラの種類による味の違いは<NuxtLink to="/blog/tequila-shurui/">テキーラの種類を徹底解説した記事</NuxtLink>が参考になります。
     </p>
 
     <h2>ショットを頼んでから乾杯までの流れは？</h2>
@@ -107,7 +107,7 @@ const relatedArticles = [
       <li><strong>ライムをかじり、チェイサーで整える</strong>——余韻を楽しんだら、水を飲んでペースをリセットします。</li>
     </ol>
     <p>
-      細かい作法や塩・ライムの順番については、<NuxtLink to="/blog/tequila-shot-yarikata">テキーラショットのやり方</NuxtLink>で予習しておくと、初めてでも堂々と乾杯できます。
+      細かい作法や塩・ライムの順番については、<NuxtLink to="/blog/tequila-shot-yarikata/">テキーラショットのやり方</NuxtLink>で予習しておくと、初めてでも堂々と乾杯できます。
     </p>
 
     <h2>盛り上がる飲み方｜コール・掛け声の文化</h2>
@@ -146,7 +146,7 @@ const relatedArticles = [
       「盛り上がりたいけれど、40度のショットはきつい」という方も心配いりません。楽しみ方はいくらでもあります。
     </p>
     <ul>
-      <li><strong>テキーラベースのカクテルを選ぶ</strong>——マルガリータやテキーラサンライズなら、テキーラの風味を楽しみながら度数を抑えられます。詳しくは<NuxtLink to="/blog/tequila-cocktail">テキーラで作る人気カクテル10選</NuxtLink>をどうぞ。</li>
+      <li><strong>テキーラベースのカクテルを選ぶ</strong>——マルガリータやテキーラサンライズなら、テキーラの風味を楽しみながら度数を抑えられます。詳しくは<NuxtLink to="/blog/tequila-cocktail/">テキーラで作る人気カクテル10選</NuxtLink>をどうぞ。</li>
       <li><strong>乾杯だけ参加する</strong>——自分はソフトドリンクや薄めのドリンクで乾杯に加わるのも、立派な楽しみ方です。</li>
       <li><strong>度数低めのショットを選ぶ</strong>——甘いリキュール系ショットから始めて、雰囲気に慣れるのもおすすめです。</li>
     </ul>

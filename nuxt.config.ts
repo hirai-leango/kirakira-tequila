@@ -3,6 +3,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt'],
+  nitro: {
+    prerender: {
+      // generate /path/index.html so trailing-slash URLs resolve on static hosting
+      autoSubfolderIndex: true,
+    },
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'ja' },
@@ -32,7 +38,7 @@ export default defineNuxtConfig({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
             name: 'キラキラテキーラ',
-            url: 'https://kirakira-tequila.jp',
+            url: 'https://kirakira-tequila.jp/',
             description:
               'ダイヤモンドを纏ったキラキラテキーラ。コンセプトカフェ・ガールズバーに特別な体験を。',
           }),
@@ -43,7 +49,7 @@ export default defineNuxtConfig({
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'キラキラテキーラ',
-            url: 'https://kirakira-tequila.jp',
+            url: 'https://kirakira-tequila.jp/',
             logo: 'https://kirakira-tequila.jp/logo.png',
           }),
         },

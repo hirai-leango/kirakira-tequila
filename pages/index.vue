@@ -94,8 +94,8 @@ const baeSteps = [
           いつものショットが最高の思い出に。
         </p>
         <div class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <NuxtLink to="/products" class="btn-holo hover-sparkle">商品を見る</NuxtLink>
-          <NuxtLink to="/contact" class="btn-outline-holo">導入のご相談</NuxtLink>
+          <NuxtLink to="/products/" class="btn-holo hover-sparkle">商品を見る</NuxtLink>
+          <NuxtLink to="/contact/" class="btn-outline-holo">導入のご相談</NuxtLink>
         </div>
       </div>
 
@@ -147,7 +147,7 @@ const baeSteps = [
         <div class="mt-16 grid gap-8 md:grid-cols-2">
           <FadeIn v-for="(product, i) in teaserProducts" :key="product.name" :delay="i * 150">
             <NuxtLink
-              to="/products"
+              to="/products/"
               class="glass-card group relative block overflow-hidden p-10 text-center"
               :class="product.glow"
             >
@@ -206,7 +206,7 @@ const baeSteps = [
               「映える！」「飲みたい！」を、あなたのお店に。
             </p>
             <div class="mt-8">
-              <NuxtLink to="/contact" class="btn-holo hover-sparkle">導入について問い合わせる</NuxtLink>
+              <NuxtLink to="/contact/" class="btn-holo hover-sparkle">導入について問い合わせる</NuxtLink>
             </div>
           </div>
         </FadeIn>

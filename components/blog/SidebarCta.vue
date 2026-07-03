@@ -12,7 +12,7 @@
         ダイヤモンドを纏った光るボトルでショット演出が一変。コンカフェ・ガールズバー・バーの売上とSNS拡散を後押しします。
       </p>
       <NuxtLink
-        to="/contact"
+        to="/contact/"
         class="hover-sparkle mt-5 inline-block rounded-full bg-night px-8 py-3 text-sm font-black tracking-widest text-gold transition-transform hover:scale-105"
       >
         お問い合わせ

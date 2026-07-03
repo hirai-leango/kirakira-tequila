@@ -33,10 +33,10 @@ const faqs = [
 ]
 
 const relatedArticles = [
-  { title: 'テキーラ観覧車とは？人気エンタメドリンクの世界と楽しみ方', url: '/blog/tequila-kanransha', category: 'エンタメ・演出' },
-  { title: 'エンタメテキーラの世界｜テキーラ観覧車からキラキラテキーラまで', url: '/blog/tequila-entertainment', category: 'エンタメ・演出' },
-  { title: 'コンカフェのショットで盛り上がる方法｜演出アイデアとおすすめお酒', url: '/blog/concafe-shot-moriagarikatta', category: 'エンタメ・演出' },
-  { title: 'テキーラで作る人気カクテル10選｜マルガリータからテキーラサンライズまで', url: '/blog/tequila-cocktail', category: 'テキーラの飲み方' },
+  { title: 'テキーラ観覧車とは？人気エンタメドリンクの世界と楽しみ方', url: '/blog/tequila-kanransha/', category: 'エンタメ・演出' },
+  { title: 'エンタメテキーラの世界｜テキーラ観覧車からキラキラテキーラまで', url: '/blog/tequila-entertainment/', category: 'エンタメ・演出' },
+  { title: 'コンカフェのショットで盛り上がる方法｜演出アイデアとおすすめお酒', url: '/blog/concafe-shot-moriagarikatta/', category: 'エンタメ・演出' },
+  { title: 'テキーラで作る人気カクテル10選｜マルガリータからテキーラサンライズまで', url: '/blog/tequila-cocktail/', category: 'テキーラの飲み方' },
 ]
 </script>
 
@@ -86,7 +86,7 @@ const relatedArticles = [
     </p>
     <div class="table-scroll"><table><thead><tr><th>ドリンク・演出</th><th>映えの主役</th><th>写真/動画の向き</th><th>価格帯の目安</th><th>おすすめの場面</th></tr></thead><tbody><tr><td>グラデーションカクテル</td><td>色の層と透明感</td><td>写真向き</td><td>1杯800〜1,500円程度</td><td>日常の一杯・カフェバー</td></tr><tr><td>光るショット・LED演出</td><td>暗闇での発光</td><td>写真・動画両方</td><td>1杯1,000〜2,000円程度</td><td>ナイトレジャー全般</td></tr><tr><td>キラキラボトル（光るボトル）</td><td>ボトル自体の輝きとダイヤの装飾</td><td>写真・動画両方</td><td>ボトル単位（お店により設定）</td><td>記念日・推しのお祝い</td></tr><tr><td>シャンパンタワー</td><td>注ぐ瞬間のスケール感</td><td>動画向き</td><td>数万円〜</td><td>誕生日・周年イベント</td></tr><tr><td>テキーラ観覧車</td><td>回転するショットの演出</td><td>動画向き</td><td>数千円〜1万円程度</td><td>グループでの乾杯・イベント</td></tr></tbody></table></div>
     <p>
-      手軽な一杯からイベント級の演出まで、映えドリンクは価格帯も幅広く揃っています。中でもテキーラ観覧車は近年SNSで急速に広まった演出で、詳しくは<NuxtLink to="/blog/tequila-kanransha">テキーラ観覧車の解説記事</NuxtLink>で紹介しています。
+      手軽な一杯からイベント級の演出まで、映えドリンクは価格帯も幅広く揃っています。中でもテキーラ観覧車は近年SNSで急速に広まった演出で、詳しくは<NuxtLink to="/blog/tequila-kanransha/">テキーラ観覧車の解説記事</NuxtLink>で紹介しています。
     </p>
 
     <h2>定番のインスタ映えカクテル</h2>
@@ -100,7 +100,7 @@ const relatedArticles = [
       <li><strong>エディブルフラワーのカクテル</strong>——食用花を浮かべた一杯は、俯瞰撮影で最も映えます。</li>
     </ul>
     <p>
-      テキーラベースのカクテルは色鮮やかなものが多く、映え狙いには特におすすめです。レシピや特徴は<NuxtLink to="/blog/tequila-cocktail">テキーラで作る人気カクテル10選</NuxtLink>で詳しく解説しています。
+      テキーラベースのカクテルは色鮮やかなものが多く、映え狙いには特におすすめです。レシピや特徴は<NuxtLink to="/blog/tequila-cocktail/">テキーラで作る人気カクテル10選</NuxtLink>で詳しく解説しています。
     </p>
     <h3>カクテルを映えさせる小物づかい</h3>
     <p>
@@ -136,7 +136,7 @@ const relatedArticles = [
       映えるお酒が最も輝く舞台が、コンカフェやガールズバーといったナイトレジャーの空間です。世界観のある内装、暗めの照明、キャストのコール——映えの条件がすべて揃っています。
     </p>
     <ul>
-      <li><strong>ショットの整列</strong>——並んだショットグラスは、推し活の「本数」を記録する定番の画。ショットで盛り上がるコツは<NuxtLink to="/blog/concafe-shot-moriagarikatta">コンカフェのショットで盛り上がる方法</NuxtLink>で詳しく解説しています。</li>
+      <li><strong>ショットの整列</strong>——並んだショットグラスは、推し活の「本数」を記録する定番の画。ショットで盛り上がるコツは<NuxtLink to="/blog/concafe-shot-moriagarikatta/">コンカフェのショットで盛り上がる方法</NuxtLink>で詳しく解説しています。</li>
       <li><strong>記念日の特別ボトル</strong>——光るボトルにメッセージを添えれば、誕生日投稿の主役になります。</li>
       <li><strong>コール中のリール動画</strong>——音と動きが揃ったショート動画は、お店の雰囲気を伝える最強の素材です。</li>
     </ul>

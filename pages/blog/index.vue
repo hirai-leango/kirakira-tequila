@@ -3,7 +3,7 @@ useSeo({
   title: 'ブログ | キラキラテキーラ',
   description:
     'テキーラの基礎知識・飲み方から、コンセプトカフェ・ガールズバーの楽しみ方、話題のドリンク演出まで。キラキラテキーラ編集部がお届けするテキーラ・ナイトライフ専門メディアです。',
-  path: '/blog',
+  path: '/blog/',
 })
 
 const { all, categories } = useBlogArticles()
@@ -43,7 +43,7 @@ const filtered = computed(() =>
     <nav class="mx-auto max-w-5xl px-6" aria-label="カテゴリー絞り込み">
       <div class="flex flex-wrap items-center justify-center gap-3">
         <NuxtLink
-          to="/blog"
+          to="/blog/"
           class="rounded-full border px-4 py-1.5 text-xs font-bold tracking-widest transition-colors"
           :class="
             selectedCategory === ''
@@ -56,7 +56,7 @@ const filtered = computed(() =>
         <NuxtLink
           v-for="cat in categories"
           :key="cat.name"
-          :to="`/blog?category=${encodeURIComponent(cat.name)}`"
+          :to="`/blog/?category=${encodeURIComponent(cat.name)}`"
           class="rounded-full border px-4 py-1.5 text-xs font-bold tracking-widest transition-colors"
           :class="
             selectedCategory === cat.name
@@ -73,7 +73,7 @@ const filtered = computed(() =>
     <section class="py-16 pb-24">
       <div class="mx-auto grid max-w-5xl gap-6 px-6 md:grid-cols-2">
         <FadeIn v-for="(article, i) in filtered" :key="article.slug" :delay="(i % 4) * 80">
-          <NuxtLink :to="`/blog/${article.slug}`" class="glass-card group block h-full p-7">
+          <NuxtLink :to="`/blog/${article.slug}/`" class="glass-card group block h-full p-7">
             <div class="flex flex-wrap items-center gap-3 text-xs">
               <span class="rounded-full border border-gold/50 px-3 py-1 font-bold tracking-widest text-gold">
                 {{ article.category }}

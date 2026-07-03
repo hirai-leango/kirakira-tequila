@@ -3,7 +3,7 @@ useSeo({
   title: '特定商取引法に基づく表記 | キラキラテキーラ',
   description:
     'キラキラテキーラ（株式会社キラキラテキーラ）の特定商取引法に基づく表記。販売業者、運営責任者、お問い合わせ先、販売価格、返品・交換などについて記載しています。',
-  path: '/legal',
+  path: '/legal/',
 })
 
 const items = [
@@ -66,7 +66,7 @@ const items = [
           未成年者の飲酒は法律で禁止されています。お酒は20歳を過ぎてから。
         </p>
         <div class="mt-8 text-center">
-          <NuxtLink to="/contact" class="btn-outline-holo">お問い合わせはこちら</NuxtLink>
+          <NuxtLink to="/contact/" class="btn-outline-holo">お問い合わせはこちら</NuxtLink>
         </div>
       </FadeIn>
     </div>

@@ -3,7 +3,7 @@ useSeo({
   title: 'プライバシーポリシー | キラキラテキーラ',
   description:
     'キラキラテキーラ（株式会社キラキラテキーラ）のプライバシーポリシー。お問い合わせフォームでお預かりする個人情報の取り扱い、利用目的、管理方法についてご案内します。',
-  path: '/privacy',
+  path: '/privacy/',
 })
 
 const sections = [
@@ -90,7 +90,7 @@ const sections = [
 
       <FadeIn :delay="250">
         <div class="mt-12 text-center">
-          <NuxtLink to="/contact" class="btn-outline-holo">お問い合わせはこちら</NuxtLink>
+          <NuxtLink to="/contact/" class="btn-outline-holo">お問い合わせはこちら</NuxtLink>
         </div>
       </FadeIn>
     </div>
