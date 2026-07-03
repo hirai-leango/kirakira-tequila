@@ -2,12 +2,25 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt'],
+  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxtjs/sitemap'],
+  site: {
+    url: 'https://kirakira-tequila.com',
+    name: 'キラキラテキーラ',
+    trailingSlash: true,
+  },
+  sitemap: {
+    autoLastmod: true,
+    xslColumns: [
+      { label: 'URL', width: '75%' },
+      { label: 'Last Modified', select: 'sitemap:lastmod', width: '25%' },
+    ],
+  },
   nitro: {
     preset: 'cloudflare-pages',
     prerender: {
       // generate /path/index.html so trailing-slash URLs resolve on static hosting
       autoSubfolderIndex: true,
+      routes: ['/sitemap.xml'],
     },
   },
   app: {
