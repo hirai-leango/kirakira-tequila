@@ -11,7 +11,7 @@ const items = [
   { label: '運営責任者', value: '平井' },
   { label: '所在地', value: '東京都（詳細はお問い合わせにて開示いたします）' },
   { label: '電話番号', value: 'お問い合わせにて開示いたします' },
-  { label: 'メールアドレス', value: 'info@kirakira-tequila.jp', mail: true },
+  { label: 'メールアドレス', value: 'info@kirakira-tequila.com', mail: true },
   { label: '販売価格', value: 'お問い合わせにより個別にご案内いたします' },
   { label: '商品代金以外の必要料金', value: '送料・振込手数料（詳細はお見積り時にご案内いたします）' },
   { label: '支払方法', value: 'お問い合わせ後、ご案内する方法によります' },

@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://kirakira-tequila.jp'
+export const SITE_URL = 'https://kirakira-tequila.com'
 export const SITE_NAME = 'キラキラテキーラ'
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
 export const SITE_LOGO = `${SITE_URL}/logo.png`

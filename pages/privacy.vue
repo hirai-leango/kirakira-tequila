@@ -76,10 +76,10 @@ const sections = [
             <div v-if="section.contact" class="mt-6 rounded-2xl border border-gold/30 bg-white/5 p-6 text-center">
               <p class="text-sm tracking-widest text-white/60">お問い合わせ窓口</p>
               <a
-                href="mailto:info@kirakira-tequila.jp"
+                href="mailto:info@kirakira-tequila.com"
                 class="mt-2 inline-block text-lg font-bold text-gold transition-colors hover:text-gold-light md:text-xl"
               >
-                info@kirakira-tequila.jp
+                info@kirakira-tequila.com
               </a>
             </div>
           </section>
